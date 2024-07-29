@@ -1,12 +1,40 @@
 <div class="user-details">
     <mat-list>
         <mat-list-item class="u-textalign-center">
-            <span class="mat-headline-large">User Details</span>
+            <span class="mat-headline-large title">User Details</span>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
-            <span class="mat-headline-medium">Name : </span><span class="mat-headline-small">Felipe</span>
+            <span class="title mat-title-large">Name : </span><span class="mat-headline-small">{{user.nome}}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
+        <mat-list-item>
+            <span class="title mat-title-large">Email : </span><span class="mat-headline-small">{{user.email}}</span>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+            <span class="title mat-title-large">Phone Number : </span><span class="mat-headline-small">{{user.telefone}}</span>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+            <span class="title mat-title-large">Adress : </span><span class="mat-headline-small">
+                {{user.endereco?.cidade}}
+                {{user.endereco?.pais}}
+                {{user.endereco?.rua}}
+                {{user.endereco?.numero}}
+            </span>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+            <span class="title mat-title-large">Active : </span><span class="mat-headline-small">{{user.ativo}}</span>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+            <span class="title mat-title-large">Role : </span><span class="mat-headline-small">{{user.funcao}}</span>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+            <span class="title mat-title-large">Register Date : </span><span class="mat-headline-small">{{user.dataCadastro}}</span>
+        </mat-list-item>
     </mat-list>
 </div>
