@@ -12,10 +12,6 @@ export class StatusPipe implements PipeTransform {
       return 'Invalid status'
     }
 
-    if(!status){
-      return 'Inactive'
-    }
-
-    return 'Active'
+    return status ? 'Active' : 'Inactive'
   }
 }
