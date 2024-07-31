@@ -10,6 +10,8 @@ export class AppComponent {
   user = {} as IUser
   getUserSelected(userSelected : IUser){
     this.user = userSelected
+    this.showUserDetails = true
   }
+  showUserDetails: boolean = false
   
 }

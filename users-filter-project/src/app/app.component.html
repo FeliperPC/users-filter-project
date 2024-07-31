@@ -10,6 +10,6 @@
     </div>
   </div>
   <div class="right-div">
-    <app-user-details [user]="user"></app-user-details>
+    <app-user-details [user]="user" *ngIf="showUserDetails"></app-user-details>
   </div>
 </div>
