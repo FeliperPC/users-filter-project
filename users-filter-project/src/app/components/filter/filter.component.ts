@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IFilterOptions } from '../../interfaces/filter-options.interface';
 
 @Component({
   selector: 'app-filter',
@@ -6,5 +7,20 @@ import { Component } from '@angular/core';
   styleUrl: './filter.component.scss'
 })
 export class FilterComponent {
-  names = [{value:'Joshua', viewValue:'Joshua'}, {value:'Felipe', viewValue:'Felipe'}, {value:'Daniel', viewValue:'Daniel'}];
+    filterOptions : IFilterOptions = {
+    name:'',
+    startDate:'' as unknown as Date, // ou posso tipar e colocar undefined
+    endDate:'' as unknown as Date,
+    status: undefined
+  }
+
+  status = [
+    {value:true, viewValue:'Active'}, 
+    {value:false, viewValue:'Inactive'}
+  ];
+
+  onFilter(){
+    console.log(this.filterOptions)
+  }
+
 }
