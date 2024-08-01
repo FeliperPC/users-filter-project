@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core'; 
+import { Component, EventEmitter, Input, Output } from '@angular/core'; 
 import { IUser } from '../../interfaces/user/user.interface';
 import {usersList as UserList} from '../../data/users-list'
 
@@ -8,11 +8,12 @@ import {usersList as UserList} from '../../data/users-list'
   styleUrl: './users-list.component.scss'
 })
 export class UsersListComponent {
-  usersList : IUser[] = UserList; // declara a base de dados da tabela
+  // usersList : IUser[] = UserList; // declara a base de dados da tabela
   displayedColumns: string[] = ['name', 'date', 'status']; // declara as colunas da tabela
-user: any;
+  user: any;
 
 @Output() userSelected = new EventEmitter<IUser>()
+@Input() usersList : IUser[] = [] as IUser[]
   onUsersSelected(element : IUser){
     this.userSelected.emit(element)
   }
