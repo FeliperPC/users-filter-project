@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IUser } from './interfaces/user/user.interface';
-import { usersList as UserList} from './data/users-list';
+import { usersList as UserList, usersList} from './data/users-list';
 import { IFilterOptions } from './interfaces/filter-options.interface';
 
 @Component({
@@ -16,8 +16,8 @@ export class AppComponent {
 
   ngOnInit(): void {
     setTimeout(() => {
-      this.usersListFiltered = UserList // capturando o objeto data para o componente pai app component para posteriormente ser manipulado
       this.usersList = UserList
+      this.usersListFiltered = this.usersList // capturando o objeto data para o componente pai app component para posteriormente ser manipulado
     },1)
   }
   getUserSelected(userSelected : IUser){
@@ -28,8 +28,24 @@ export class AppComponent {
 
   setFilterElement(filterOptions:IFilterOptions){
     this.filteredElement = filterOptions
-    console.log(this.filteredElement);
     
+    this.usersListFiltered = this.filterUserList(filterOptions, this.usersList);
+  }
+
+  filterUserList(filterOptions: IFilterOptions, usersList: IUser[]): IUser[] {
+    let filteredList = [] as IUser[];
+    filteredList  = filterUsersByName(filterOptions.name,usersList);
+    return filteredList
   }
   
 }
+function filterUsersByName(name: string, usersList: IUser[]) : IUser[] {
+  const INVALID_NAME = name === undefined || name === null
+  
+  if(INVALID_NAME){
+    return usersList
+  }
+  const filteredList = usersList.filter((user)=> user.nome.toLocaleLowerCase().includes(name.toLocaleLowerCase()))
+  return filteredList
+}
+
