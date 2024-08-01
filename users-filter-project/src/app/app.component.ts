@@ -35,6 +35,9 @@ export class AppComponent {
   filterUserList(filterOptions: IFilterOptions, usersList: IUser[]): IUser[] {
     let filteredList = [] as IUser[];
     filteredList  = filterUsersByName(filterOptions.name,usersList);
+    filteredList  = filterUsersByStatus(filterOptions.status,filteredList
+    
+    );
     return filteredList
   }
   
@@ -45,7 +48,18 @@ function filterUsersByName(name: string, usersList: IUser[]) : IUser[] {
   if(INVALID_NAME){
     return usersList
   }
+
   const filteredList = usersList.filter((user)=> user.nome.toLocaleLowerCase().includes(name.toLocaleLowerCase()))
+  return filteredList
+}
+
+function filterUsersByStatus(status: boolean | undefined, usersList: IUser[]): IUser[] {
+  const INVALID_STATUS = status === undefined || status === null
+  
+  if(INVALID_STATUS){
+    return usersList
+  }
+  const filteredList = usersList.filter((user)=> user.ativo === status)
   return filteredList
 }
 
