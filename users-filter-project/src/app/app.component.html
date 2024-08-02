@@ -3,7 +3,7 @@
 <div class="container">
   <div class="left-container">
     <div class="top-div">
-      <app-filter (onFilterEmit)="setFilterElement($event)"></app-filter>
+      <app-filter (onFilterEmit)="setFilterElement($event)" (clearFilterEmit)="clearFilter()"></app-filter>
     </div>
     <div class="main-left-div">
       <app-users-list (userSelected)="getUserSelected($event)" [usersList]="usersListFiltered"></app-users-list>

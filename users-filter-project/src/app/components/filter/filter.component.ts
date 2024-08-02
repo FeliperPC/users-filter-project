@@ -9,8 +9,8 @@ import { IFilterOptions } from '../../interfaces/filter-options.interface';
 export class FilterComponent {
     filterOptions : IFilterOptions = {
     name:'',
-    startDate:'' as unknown as Date, // ou posso tipar e colocar undefined
-    endDate:'' as unknown as Date,
+    startDate: undefined, // ou posso tipar e colocar undefined
+    endDate: undefined,
     status: undefined
   }
 
@@ -19,9 +19,22 @@ export class FilterComponent {
     {value:false, viewValue:'Inactive'}
   ];
   
-  @Output() onFilterEmit = new EventEmitter<IFilterOptions>()  
+  @Output() onFilterEmit = new EventEmitter<IFilterOptions>() 
+  @Output() clearFilterEmit = new EventEmitter<void>()
+  
   onFilter(){
     this.onFilterEmit.emit(this.filterOptions)
   }
+  onClearFilter() {
+    this.clearInputsValues()
+    this.clearFilterEmit.emit()
+  }
 
+  clearInputsValues() {
+    this.filterOptions.name = ''
+    this.filterOptions.status = undefined
+    this.filterOptions.startDate = ' ' as unknown as Date
+    this.filterOptions.endDate = ' ' as unknown as Date
+  }
 }
+

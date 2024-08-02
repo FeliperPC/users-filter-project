@@ -27,6 +27,10 @@ export class AppComponent {
   }
   showUserDetails: boolean = false
 
+  clearFilter(){  
+    this.usersListFiltered = this.usersList      
+  }
+
   setFilterElement(filterOptions:IFilterOptions){
     this.filteredElement = filterOptions
     

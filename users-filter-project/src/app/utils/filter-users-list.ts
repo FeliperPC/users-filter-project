@@ -3,6 +3,7 @@ import { IUser } from "../interfaces/user/user.interface"
 import { IFilterOptions } from "../interfaces/filter-options.interface"
 
   const filterUsersByName = (name: string, usersList: IUser[]) : IUser[] => {
+    
     const INVALID_NAME = name === undefined || name === null
     
     if(INVALID_NAME){
@@ -16,8 +17,9 @@ import { IFilterOptions } from "../interfaces/filter-options.interface"
   }
 
    const filterUsersListByDate = (startDate: Date | undefined, endDate: Date | undefined, usersList: IUser[]): IUser[] => {
-    const DATE_NOT_SELECTED = startDate === undefined || endDate === undefined
+    console.log(startDate);
     
+    const DATE_NOT_SELECTED = startDate === undefined || endDate === undefined
     if(DATE_NOT_SELECTED){
       return usersList
     }
@@ -39,8 +41,9 @@ import { IFilterOptions } from "../interfaces/filter-options.interface"
   
   export const filterUserList = (filterOptions: IFilterOptions, usersList: IUser[]): IUser[] => {
     let filteredList = [] as IUser[];
-    filteredList  = filterUsersByName(filterOptions.name,usersList);
-    filteredList  = filterUsersByStatus(filterOptions.status,filteredList);
+    filteredList = filterUsersByName(filterOptions.name,usersList);
+    filteredList = filterUsersByStatus(filterOptions.status,filteredList);
     filteredList = filterUsersListByDate(filterOptions.startDate,filterOptions.endDate,filteredList);
+
     return filteredList
   }
