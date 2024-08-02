@@ -208,73 +208,73 @@ export const usersList : IUser[]= [
             ultimoAcesso: "2023-09-16T09:00:00.000Z"
         }
     },
-    {
-        nome: "Lucas Rodrigues",
-        email: "lucas.rodrigues@example.com",
-        senha: "Lucas123",
-        idade: 29,
-        endereco: {
-            rua: "Rua das Laranjeiras",
-            numero: 40,
-            cidade: "Florianópolis",
-            estado: "SC",
-            pais: "Brasil"
-        },
-        telefone: "48912345678",
-        ativo: true,
-        funcao: "Desenvolvedor",
-        dataCadastro: "2023-09-20T09:00:00.000Z",
-        status: {
-            online: false,
-            verificado: true,
-            assinaturaAtiva: false,
-            ultimoAcesso: "2023-09-22T09:00:00.000Z"
-        }
-    },
-    {
-        nome: "Fernanda Oliveira",
-        email: "fernanda.oliveira@example.com",
-        senha: "Fernanda456",
-        idade: 31,
-        endereco: {
-            rua: "Avenida Principal",
-            numero: 10,
-            cidade: "Belém",
-            estado: "PA",
-            pais: "Brasil"
-        },
-        telefone: "91987654321",
-        ativo: true,
-        funcao: "Analista",
-        dataCadastro: "2023-09-25T09:00:00.000Z",
-        status: {
-            online: true,
-            verificado: true,
-            assinaturaAtiva: true,
-            ultimoAcesso: "2023-09-26T09:00:00.000Z"
-        }
-    },
-    {
-        nome: "Rafael Souza",
-        email: "rafael.souza@example.com",
-        senha: "Rafael789",
-        idade: 33,
-        endereco: {
-            rua: "Rua das Acácias",
-            numero: 15,
-            cidade: "Goiânia",
-            estado: "GO",
-            pais: "Brasil"
-        },
-        telefone: "62912345678",
-        ativo: false,
-        funcao: "Gerente",
-        dataCadastro: "2023-09-30T09:00:00.000Z",
-        status: {
-            online: true,
-            verificado: false,
-            assinaturaAtiva: true,
-            ultimoAcesso: "2023-10-01T09:00:00.000Z"
-        }
-    },
+    // {
+    //     nome: "Lucas Rodrigues",
+    //     email: "lucas.rodrigues@example.com",
+    //     senha: "Lucas123",
+    //     idade: 29,
+    //     endereco: {
+    //         rua: "Rua das Laranjeiras",
+    //         numero: 40,
+    //         cidade: "Florianópolis",
+    //         estado: "SC",
+    //         pais: "Brasil"
+    //     },
+    //     telefone: "48912345678",
+    //     ativo: true,
+    //     funcao: "Desenvolvedor",
+    //     dataCadastro: "2023-09-20T09:00:00.000Z",
+    //     status: {
+    //         online: false,
+    //         verificado: true,
+    //         assinaturaAtiva: false,
+    //         ultimoAcesso: "2023-09-22T09:00:00.000Z"
+    //     }
+    // },
+    // {
+    //     nome: "Fernanda Oliveira",
+    //     email: "fernanda.oliveira@example.com",
+    //     senha: "Fernanda456",
+    //     idade: 31,
+    //     endereco: {
+    //         rua: "Avenida Principal",
+    //         numero: 10,
+    //         cidade: "Belém",
+    //         estado: "PA",
+    //         pais: "Brasil"
+    //     },
+    //     telefone: "91987654321",
+    //     ativo: true,
+    //     funcao: "Analista",
+    //     dataCadastro: "2023-09-25T09:00:00.000Z",
+    //     status: {
+    //         online: true,
+    //         verificado: true,
+    //         assinaturaAtiva: true,
+    //         ultimoAcesso: "2023-09-26T09:00:00.000Z"
+    //     }
+    // },
+    // {
+    //     nome: "Rafael Souza",
+    //     email: "rafael.souza@example.com",
+    //     senha: "Rafael789",
+    //     idade: 33,
+    //     endereco: {
+    //         rua: "Rua das Acácias",
+    //         numero: 15,
+    //         cidade: "Goiânia",
+    //         estado: "GO",
+    //         pais: "Brasil"
+    //     },
+    //     telefone: "62912345678",
+    //     ativo: false,
+    //     funcao: "Gerente",
+    //     dataCadastro: "2023-09-30T09:00:00.000Z",
+    //     status: {
+    //         online: true,
+    //         verificado: false,
+    //         assinaturaAtiva: true,
+    //         ultimoAcesso: "2023-10-01T09:00:00.000Z"
+    //     }
+    // },
     ];

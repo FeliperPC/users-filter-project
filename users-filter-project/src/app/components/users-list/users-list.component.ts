@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core'; 
+import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core'; 
 import { IUser } from '../../interfaces/user/user.interface';
-import {usersList as UserList} from '../../data/users-list'
+import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-users-list',
